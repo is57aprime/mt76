@@ -1676,7 +1676,7 @@ mt76x2/mcu.o: $(deps_mt76x2/mcu.o)
 $(deps_mt76x2/mcu.o):
 
 mt76x2/mcu.o: $(wildcard /usr/src/linux-headers-6.14.0-29-generic/tools/objtool/objtool)
-#SYMVER mt76x2_mcu_load_cr 0x0eb3345e
-#SYMVER mt76x2_mcu_tssi_comp 0x15d86e05
-#SYMVER mt76x2_mcu_set_channel 0x4cb64966
-#SYMVER mt76x2_mcu_init_gain 0x56c35d0e
+#SYMVER mt76x2_mcu_load_cr 0xdbaea94c
+#SYMVER mt76x2_mcu_tssi_comp 0xa9df779c
+#SYMVER mt76x2_mcu_set_channel 0x79eabf8d
+#SYMVER mt76x2_mcu_init_gain 0x8dabce81

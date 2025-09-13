@@ -1655,7 +1655,7 @@ mt76x0/init.o: $(deps_mt76x0/init.o)
 $(deps_mt76x0/init.o):
 
 mt76x0/init.o: $(wildcard /usr/src/linux-headers-6.14.0-29-generic/tools/objtool/objtool)
-#SYMVER mt76x0_mac_stop 0x640b6701
-#SYMVER mt76x0_chip_onoff 0x2851e6bf
-#SYMVER mt76x0_register_device 0x4c9ce48e
-#SYMVER mt76x0_init_hardware 0x4c9ce48e
+#SYMVER mt76x0_mac_stop 0x4c28f930
+#SYMVER mt76x0_chip_onoff 0x74dbf07d
+#SYMVER mt76x0_register_device 0xa84c96b3
+#SYMVER mt76x0_init_hardware 0xa84c96b3

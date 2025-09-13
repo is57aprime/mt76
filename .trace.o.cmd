@@ -1732,10 +1732,10 @@ $(deps_trace.o):
 
 trace.o: $(wildcard /usr/src/linux-headers-6.14.0-29-generic/tools/objtool/objtool)
 #SYMVER __tracepoint_dev_irq 0x9fa91036
-#SYMVER __traceiter_dev_irq 0xb45e0be9
-#SYMVER __SCT__tp_func_mac_txdone 0x78a444c8
+#SYMVER __traceiter_dev_irq 0xcf87bcbc
+#SYMVER __SCT__tp_func_mac_txdone 0xa9119270
 #SYMVER __SCK__tp_func_dev_irq 0xfc5f8088
 #SYMVER __tracepoint_mac_txdone 0x9fa91036
-#SYMVER __SCT__tp_func_dev_irq 0x9818858f
+#SYMVER __SCT__tp_func_dev_irq 0xdbb4076b
 #SYMVER __SCK__tp_func_mac_txdone 0xfc5f8088
-#SYMVER __traceiter_mac_txdone 0xb39049b5
+#SYMVER __traceiter_mac_txdone 0xc849fee0

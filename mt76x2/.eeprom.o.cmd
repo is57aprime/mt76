@@ -1679,8 +1679,8 @@ mt76x2/eeprom.o: $(deps_mt76x2/eeprom.o)
 $(deps_mt76x2/eeprom.o):
 
 mt76x2/eeprom.o: $(wildcard /usr/src/linux-headers-6.14.0-29-generic/tools/objtool/objtool)
-#SYMVER mt76x2_get_rate_power 0xa9469fbb
-#SYMVER mt76x2_read_rx_gain 0x66890be2
-#SYMVER mt76x2_get_power_info 0x90e1721c
-#SYMVER mt76x2_eeprom_init 0x0382c22c
-#SYMVER mt76x2_get_temp_comp 0x3f8f4ef4
+#SYMVER mt76x2_get_rate_power 0x8593e7ac
+#SYMVER mt76x2_read_rx_gain 0x5b5def61
+#SYMVER mt76x2_get_power_info 0xbd45679f
+#SYMVER mt76x2_eeprom_init 0x1eca1a1b
+#SYMVER mt76x2_get_temp_comp 0xbb3b54e5

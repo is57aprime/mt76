@@ -343,7 +343,7 @@ int besra_dma_init(struct besra_dev *dev)
 	if (ret < 0)
 		return ret;
 
-	netif_napi_add_tx_weight(&dev->mt76.tx_napi_dev, &dev->mt76.tx_napi,
+	netif_napi_add_tx_weight(dev->mt76.tx_napi_dev, &dev->mt76.tx_napi,
 				 besra_poll_tx, NAPI_POLL_WEIGHT);
 	napi_enable(&dev->mt76.tx_napi);
 

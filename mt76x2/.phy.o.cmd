@@ -1674,9 +1674,9 @@ mt76x2/phy.o: $(deps_mt76x2/phy.o)
 $(deps_mt76x2/phy.o):
 
 mt76x2/phy.o: $(wildcard /usr/src/linux-headers-6.14.0-29-generic/tools/objtool/objtool)
-#SYMVER mt76x2_phy_tssi_compensate 0x640b6701
-#SYMVER mt76x2_configure_tx_delay 0x24c5a3a2
-#SYMVER mt76x2_phy_update_channel_gain 0x640b6701
-#SYMVER mt76x2_phy_set_txpower_regs 0xdcce9d11
-#SYMVER mt76x2_apply_gain_adj 0x640b6701
-#SYMVER mt76x2_phy_set_txpower 0x640b6701
+#SYMVER mt76x2_phy_tssi_compensate 0x4c28f930
+#SYMVER mt76x2_configure_tx_delay 0x51f38a28
+#SYMVER mt76x2_phy_update_channel_gain 0x4c28f930
+#SYMVER mt76x2_phy_set_txpower_regs 0x051513d5
+#SYMVER mt76x2_apply_gain_adj 0x4c28f930
+#SYMVER mt76x2_phy_set_txpower 0x4c28f930

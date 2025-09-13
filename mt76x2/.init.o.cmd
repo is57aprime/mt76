@@ -1673,6 +1673,6 @@ $(deps_mt76x2/init.o):
 
 mt76x2/init.o: $(wildcard /usr/src/linux-headers-6.14.0-29-generic/tools/objtool/objtool)
 #SYMVER mt76x2_set_sar_specs 0x444a6fe8
-#SYMVER mt76_write_mac_initvals 0x640b6701
-#SYMVER mt76x2_init_txpower 0x6477a770
-#SYMVER mt76x2_reset_wlan 0xd0defa65
+#SYMVER mt76_write_mac_initvals 0x4c28f930
+#SYMVER mt76x2_init_txpower 0xc64119cc
+#SYMVER mt76x2_reset_wlan 0xc7c311dc

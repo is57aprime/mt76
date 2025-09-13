@@ -1643,5 +1643,5 @@ mmio.o: $(deps_mmio.o)
 $(deps_mmio.o):
 
 mmio.o: $(wildcard /usr/src/linux-headers-6.14.0-29-generic/tools/objtool/objtool)
-#SYMVER mt76_mmio_init 0x3d4559fa
-#SYMVER mt76_set_irq_mask 0xf0d30735
+#SYMVER mt76_mmio_init 0xcfaca492
+#SYMVER mt76_set_irq_mask 0xe963bd28

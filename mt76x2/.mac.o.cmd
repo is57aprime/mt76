@@ -1669,4 +1669,4 @@ mt76x2/mac.o: $(deps_mt76x2/mac.o)
 $(deps_mt76x2/mac.o):
 
 mt76x2/mac.o: $(wildcard /usr/src/linux-headers-6.14.0-29-generic/tools/objtool/objtool)
-#SYMVER mt76x2_mac_stop 0x4f4c10a8
+#SYMVER mt76x2_mac_stop 0xe519ea36

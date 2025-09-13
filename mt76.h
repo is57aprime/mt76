@@ -19,6 +19,7 @@
 #include <net/netlink.h>
 #include "util.h"
 #include "testmode.h"
+#include <linux/netdevice.h>
 
 #define MT_MCU_RING_SIZE	32
 #define MT_RX_BUF_SIZE		2048
@@ -744,8 +745,8 @@ struct mt76_dev {
 
 	struct mt76_mcu mcu;
 
-	struct net_device napi_dev;
-	struct net_device tx_napi_dev;
+	struct net_device *napi_dev;
+	struct net_device *tx_napi_dev;
 	spinlock_t rx_lock;
 	struct napi_struct napi[__MT_RXQ_MAX];
 	struct sk_buff_head rx_skb[__MT_RXQ_MAX];

@@ -1655,4 +1655,4 @@ mt76x0/phy.o: $(deps_mt76x0/phy.o)
 $(deps_mt76x0/phy.o):
 
 mt76x0/phy.o: $(wildcard /usr/src/linux-headers-6.14.0-29-generic/tools/objtool/objtool)
-#SYMVER mt76x0_phy_calibrate 0x7e43e87a
+#SYMVER mt76x0_phy_calibrate 0x7c9cd166

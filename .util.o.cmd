@@ -1641,6 +1641,6 @@ $(deps_util.o):
 util.o: $(wildcard /usr/src/linux-headers-6.14.0-29-generic/tools/objtool/objtool)
 #SYMVER __mt76_worker_fn 0xb86a39eb
 #SYMVER mt76_wcid_alloc 0xd7c4f51b
-#SYMVER __mt76_poll 0xdbb01e95
-#SYMVER mt76_get_min_avg_rssi 0xb39dc576
-#SYMVER __mt76_poll_msec 0xdbb01e95
+#SYMVER __mt76_poll 0xe86dc867
+#SYMVER mt76_get_min_avg_rssi 0xe0e5ffd0
+#SYMVER __mt76_poll_msec 0xe86dc867
