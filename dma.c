@@ -8,6 +8,7 @@
 #include "dma.h"
 #include <linux/netdevice.h>
 #include <linux/page_frag_cache.h>
+#include <linux/etherdevice.h>
 
 #if IS_ENABLED(CONFIG_NET_MEDIATEK_SOC_WED)
 
@@ -728,7 +729,8 @@ int mt76_dma_rx_poll(struct napi_struct *napi, int budget)
     struct mt76_dev *dev;
     int qid, done = 0, cur;
 
-    dev = container_of(napi->dev, struct mt76_dev, napi_dev);
+//    dev = container_of(napi->dev, struct mt76_dev, napi_dev);
+    dev = mt76_from_netdev(napi->dev);
     qid = napi - dev->napi;
 
     rcu_read_lock();
@@ -755,20 +757,30 @@ mt76_dma_init(struct mt76_dev *dev,
     int i;
 
 //	init_dummy_netdev(&dev->napi_dev);
-    dev->napi_dev = alloc_netdev_dummy(0, "dummy#");
-    if (!dev->napi_dev)
+//    dev->napi_dev = alloc_netdev_dummy(0);
+//    if (!dev->napi_dev)
+//        return -ENOMEM;
+////	init_dummy_netdev(&dev->tx_napi_dev);
+//    dev->tx_napi_dev = alloc_netdev_dummy(0);
+//    if (!dev->tx_napi_dev)
+//        return -ENOMEM;
+    dev->napi_dev    = alloc_netdev_dummy(sizeof(struct mt76_dev *));
+    dev->tx_napi_dev = alloc_netdev_dummy(sizeof(struct mt76_dev *));
+    if (!dev->napi_dev || !dev->tx_napi_dev)
         return -ENOMEM;
-//	init_dummy_netdev(&dev->tx_napi_dev);
-    dev->tx_napi_dev = alloc_netdev_dummy(0, "dummy#");
-    if (!dev->tx_napi_dev)
-        return -ENOMEM;
-    snprintf(dev->napi_dev.name, sizeof(dev->napi_dev.name), "%s",
+
+    *(struct mt76_dev **)netdev_priv(dev->napi_dev)    = dev;
+    *(struct mt76_dev **)netdev_priv(dev->tx_napi_dev) = dev;
+    snprintf(dev->napi_dev->name, sizeof(dev->napi_dev->name), "%s",
          wiphy_name(dev->hw->wiphy));
-    dev->napi_dev.threaded = 1;
+    dev->napi_dev->threaded = 1;
 
     mt76_for_each_q_rx(dev, i) {
-        netif_napi_add(&dev->napi_dev, &dev->napi[i], poll);
+//        netif_napi_add(dev->napi_dev, &dev->napi[i], mt76_poll, NAPI_POLL_WEIGHT);
+//        netif_napi_add(dev, &napi, poll);
+        netif_napi_add(dev->napi_dev, &dev->napi[i], poll);
         mt76_dma_rx_fill(dev, &dev->q_rx[i]);
+
         napi_enable(&dev->napi[i]);
     }
 
@@ -817,6 +829,8 @@ void mt76_dma_cleanup(struct mt76_dev *dev)
     }
 
     mt76_free_pending_txwi(dev);
+//    free_netdev(dev->napi_dev);
+ 	free_netdev(dev->tx_napi_dev);
 
     if (mtk_wed_device_active(&dev->mmio.wed))
         mtk_wed_device_detach(&dev->mmio.wed);

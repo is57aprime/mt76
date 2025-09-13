@@ -1,18 +1,12 @@
-dma.o: dma.c \
+mac80211.o: mac80211.c \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/compiler-version.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/kconfig.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/generated/autoconf.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/compiler_types.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/compiler_attributes.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/compiler-gcc.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/dma-mapping.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/device.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/dev_printk.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/compiler.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/compiler_types.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/generated/asm/rwonce.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/asm-generic/rwonce.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/kasan-checks.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/sched.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/sched.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/types.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/types.h \
  /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/generated/uapi/asm/types.h \
@@ -25,41 +19,23 @@ dma.o: dma.c \
  /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/posix_types.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/stddef.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/stddef.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/compiler_types.h \
  /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/posix_types.h \
  /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/uapi/asm/posix_types_64.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/uapi/asm-generic/posix_types.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/kcsan-checks.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/ratelimit.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/ratelimit_types.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/bits.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/const.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/vdso/const.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/const.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/vdso/bits.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/bits.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/build_bug.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/param.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/generated/uapi/asm/param.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/asm-generic/param.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/uapi/asm-generic/param.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/spinlock_types_raw.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/spinlock_types.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/asm-generic/qspinlock_types.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/asm-generic/qrwlock_types.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/uapi/asm/byteorder.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/byteorder/little_endian.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/byteorder/little_endian.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/swab.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/swab.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/uapi/asm/swab.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/byteorder/generic.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/lockdep_types.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/sched.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/sched.h \
  /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/current.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/build_bug.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/compiler.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/generated/asm/rwonce.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/asm-generic/rwonce.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/kasan-checks.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/kcsan-checks.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/cache.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/kernel.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/sysinfo.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/const.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/vdso/const.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/const.h \
  /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/cache.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/linkage.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/stringify.h \
@@ -93,6 +69,26 @@ dma.o: dma.c \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/printk.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/stdarg.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/kern_levels.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/ratelimit_types.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/bits.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/vdso/bits.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/bits.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/param.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/generated/uapi/asm/param.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/asm-generic/param.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/uapi/asm-generic/param.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/spinlock_types_raw.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/spinlock_types.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/asm-generic/qspinlock_types.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/asm-generic/qrwlock_types.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/uapi/asm/byteorder.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/byteorder/little_endian.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/byteorder/little_endian.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/swab.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/swab.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/uapi/asm/swab.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/byteorder/generic.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/lockdep_types.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/dynamic_debug.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/jump_label.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/cleanup.h \
@@ -289,7 +285,7 @@ dma.o: dma.c \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/rwlock.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/spinlock_api_smp.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/rwlock_api_smp.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/energy_model.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/of.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/kobject.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/sysfs.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/kernfs.h \
@@ -391,48 +387,26 @@ dma.o: dma.c \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/stat.h \
  /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/uapi/asm/stat.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/stat.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/sched/cpufreq.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/sched/topology.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/sched/idle.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/sched/sd_flags.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/ioport.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/klist.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/pm.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/hrtimer.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/hrtimer_defs.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/timerqueue.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/device/bus.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/device/class.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/device/driver.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/module.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/buildid.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/kmod.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/umh.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/sysctl.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/sysctl.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/elf.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/elf.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/ia32.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/compat.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/sem.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/sem.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/ipc.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/ipc.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/generated/uapi/asm/ipcbuf.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/uapi/asm-generic/ipcbuf.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/uapi/asm/sembuf.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/socket.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/generated/uapi/asm/socket.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/uapi/asm-generic/socket.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/generated/uapi/asm/sockios.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/uapi/asm-generic/sockios.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/sockios.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/uio.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/uio.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/socket.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/if.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/libc-compat.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/hdlc/ioctl.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/mod_devicetable.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/mei.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/mei_uuid.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/uuid.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/property.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/fwnode.h mt76.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/generated/uapi/linux/version.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/io.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/sizes.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/io.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/generated/asm/early_ioremap.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/asm-generic/early_ioremap.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/shared/io.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/asm-generic/io.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/asm-generic/iomap.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/asm-generic/pci_iomap.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/logic_pio.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/skbuff.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/bvec.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/highmem.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/fs.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/wait_bit.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/kdev_t.h \
@@ -492,14 +466,19 @@ dma.o: dma.c \
  /usr/src/linux-headers-6.14.0-29-generic/include/asm-generic/access_ok.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/cred.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/key.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/sysctl.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/sysctl.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/assoc_array.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/sched/user.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/ratelimit.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/posix-timers.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/alarmtimer.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/hrtimer.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/hrtimer_defs.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/timerqueue.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/rcuref.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/rcu_sync.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/delayed_call.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/uuid.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/errseq.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/ioprio.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/sched/rt.h \
@@ -524,6 +503,73 @@ dma.o: dma.c \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/dqblk_qtree.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/projid.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/quota.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/cacheflush.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/cacheflush.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/mm.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/pgalloc_tag.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/page_ext.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/stacktrace.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/page_ref.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/pgtable.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/memremap.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/ioport.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/cacheinfo.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/cpuhplock.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/huge_mm.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/vmstat.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/vm_event_item.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/asm-generic/cacheflush.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/kmsan.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/dma-direction.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/hardirq.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/context_tracking_state.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/ftrace_irq.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/vtime.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/hardirq.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/highmem-internal.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/socket.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/generated/uapi/asm/socket.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/uapi/asm-generic/socket.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/generated/uapi/asm/sockios.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/uapi/asm-generic/sockios.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/sockios.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/uio.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/uio.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/socket.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/net/checksum.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/checksum.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/checksum_64.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/dma-mapping.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/device.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/dev_printk.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/energy_model.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/sched/cpufreq.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/sched/topology.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/sched/idle.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/sched/sd_flags.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/klist.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/pm.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/device/bus.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/device/class.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/device/driver.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/module.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/buildid.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/kmod.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/umh.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/elf.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/elf.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/ia32.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/compat.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/sem.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/sem.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/ipc.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/ipc.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/generated/uapi/asm/ipcbuf.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/uapi/asm-generic/ipcbuf.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/uapi/asm/sembuf.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/if.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/libc-compat.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/hdlc/ioctl.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/aio_abi.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/unistd.h \
  /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/unistd.h \
@@ -552,48 +598,7 @@ dma.o: dma.c \
  /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/orc_types.h \
  /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/device.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/pm_wakeup.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/dma-direction.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/scatterlist.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/mm.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/pgalloc_tag.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/page_ext.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/stacktrace.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/page_ref.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/sizes.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/pgtable.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/memremap.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/cacheinfo.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/cpuhplock.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/huge_mm.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/vmstat.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/vm_event_item.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/io.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/generated/asm/early_ioremap.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/asm-generic/early_ioremap.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/shared/io.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/asm-generic/io.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/asm-generic/iomap.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/asm-generic/pci_iomap.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/logic_pio.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/fwnode.h mt76.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/generated/uapi/linux/version.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/io.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/skbuff.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/bvec.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/highmem.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/cacheflush.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/cacheflush.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/asm-generic/cacheflush.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/kmsan.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/hardirq.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/context_tracking_state.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/ftrace_irq.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/vtime.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/hardirq.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/highmem-internal.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/net/checksum.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/checksum.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/checksum_64.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/netdev_features.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/net/flow_dissector.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/in6.h \
@@ -613,9 +618,6 @@ dma.o: dma.c \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/leds.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/dt-bindings/leds/common.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/usb.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/mod_devicetable.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/mei.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/mei_uuid.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/usb/ch9.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/usb/ch9.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/delay.h \
@@ -786,4 +788,4 @@ dma.o: dma.c \
  /usr/src/linux-headers-6.14.0-29-generic/include/net/codel.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/net/ieee80211_radiotap.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/net/netlink.h util.h \
- testmode.h dma.h
+ testmode.h

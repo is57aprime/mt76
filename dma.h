@@ -49,4 +49,9 @@ int mt76_dma_rx_poll(struct napi_struct *napi, int budget);
 void mt76_dma_attach(struct mt76_dev *dev);
 void mt76_dma_cleanup(struct mt76_dev *dev);
 
+static inline struct mt76_dev *mt76_from_netdev(struct net_device *dev)
+{
+	return *(struct mt76_dev **)netdev_priv(dev);
+}
+
 #endif
