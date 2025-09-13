@@ -52,7 +52,7 @@ error:
 	return ret;
 }
 
-static int
+static void
 mt76_wmac_remove(struct platform_device *pdev)
 {
 	struct mt76_dev *mdev = platform_get_drvdata(pdev);
@@ -60,7 +60,7 @@ mt76_wmac_remove(struct platform_device *pdev)
 
 	mt7603_unregister_device(dev);
 
-	return 0;
+//	return 0;
 }
 
 static const struct of_device_id of_wmac_match[] = {

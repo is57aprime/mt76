@@ -1,0 +1,9 @@
+besra/pci.o
+besra/init.o
+besra/dma.o
+besra/eeprom.o
+besra/main.o
+besra/mcu.o
+besra/mac.o
+besra/debugfs.o
+besra/mmio.o

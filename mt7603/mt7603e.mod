@@ -1,0 +1,11 @@
+mt7603/pci.o
+mt7603/soc.o
+mt7603/main.o
+mt7603/init.o
+mt7603/mcu.o
+mt7603/core.o
+mt7603/dma.o
+mt7603/mac.o
+mt7603/eeprom.o
+mt7603/beacon.o
+mt7603/debugfs.o

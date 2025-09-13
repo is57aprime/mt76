@@ -95,7 +95,7 @@ out:
 	return ret;
 }
 
-static void besra_stop(struct ieee80211_hw *hw)
+static void besra_stop(struct ieee80211_hw *hw, bool temp)
 {
 	struct besra_dev *dev = besra_hw_dev(hw);
 	struct besra_phy *phy = besra_hw_phy(hw);
