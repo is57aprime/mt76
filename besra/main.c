@@ -1025,11 +1025,12 @@ static void besra_sta_rc_work(void *data, struct ieee80211_sta *sta)
 
 static void besra_sta_rc_update(struct ieee80211_hw *hw,
 				 struct ieee80211_vif *vif,
-				 struct ieee80211_sta *sta,
+				 struct ieee80211_link_sta *link_sta,
 				 u32 changed)
 {
 	struct besra_phy *phy = besra_hw_phy(hw);
 	struct besra_dev *dev = phy->dev;
+	struct ieee80211_sta *sta = link_sta->sta;
 
 	besra_sta_rc_work(&changed, sta);
 	ieee80211_queue_work(hw, &dev->rc_work);
@@ -1387,7 +1388,7 @@ const struct ieee80211_ops besra_ops = {
 	.sta_add = besra_sta_add,
 	.sta_remove = besra_sta_remove,
 	.sta_pre_rcu_remove = mt76_sta_pre_rcu_remove,
-	.sta_rc_update = besra_sta_rc_update,
+	.link_sta_rc_update = besra_sta_rc_update,
 	.set_key = besra_set_key,
 	.ampdu_action = besra_ampdu_action,
 	.set_rts_threshold = besra_set_rts_threshold,
