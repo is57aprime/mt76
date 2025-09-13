@@ -6,6 +6,8 @@
 #include <linux/dma-mapping.h>
 #include "mt76.h"
 #include "dma.h"
+#include <linux/netdevice.h>
+#include <linux/page_frag_cache.h>
 
 #if IS_ENABLED(CONFIG_NET_MEDIATEK_SOC_WED)
 
@@ -565,7 +567,7 @@ mt76_dma_alloc_queue(struct mt76_dev *dev, struct mt76_queue *q,
 static void
 mt76_dma_rx_cleanup(struct mt76_dev *dev, struct mt76_queue *q)
 {
-	struct page *page;
+//	struct page *page;
 	void *buf;
 	bool more;
 
@@ -582,12 +584,13 @@ mt76_dma_rx_cleanup(struct mt76_dev *dev, struct mt76_queue *q)
 	} while (1);
 	spin_unlock_bh(&q->lock);
 
-	if (!q->rx_page.va)
-		return;
-
-	page = virt_to_page(q->rx_page.va);
-	__page_frag_cache_drain(page, q->rx_page.pagecnt_bias);
-	memset(&q->rx_page, 0, sizeof(q->rx_page));
+//	if (!q->rx_page.va)
+//		return;
+//
+//	page = virt_to_page(q->rx_page.va);
+//	__page_frag_cache_drain(page, q->rx_page.pagecnt_bias);
+//	memset(&q->rx_page, 0, sizeof(q->rx_page));
+	page_frag_cache_drain(&q->rx_page);
 }
 
 static void
