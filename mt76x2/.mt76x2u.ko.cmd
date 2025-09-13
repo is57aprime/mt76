@@ -1,0 +1,1 @@
+savedcmd_mt76x2/mt76x2u.ko := ld -r -m elf_x86_64 -z noexecstack --no-warn-rwx-segments --build-id=sha1  -T /usr/src/linux-headers-6.14.0-29-generic/scripts/module.lds -o mt76x2/mt76x2u.ko mt76x2/mt76x2u.o mt76x2/mt76x2u.mod.o .module-common.o

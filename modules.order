@@ -1,0 +1,14 @@
+mt76.o
+mt76-usb.o
+mt76-sdio.o
+mt76x02-lib.o
+mt76x02-usb.o
+mt76-connac-lib.o
+mt76x0/mt76x0u.o
+mt76x0/mt76x0e.o
+mt76x0/mt76x0-common.o
+mt76x2/mt76x2-common.o
+mt76x2/mt76x2e.o
+mt76x2/mt76x2u.o
+mt7603/mt7603e.o
+besra/besra.o

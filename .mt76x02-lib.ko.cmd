@@ -1,0 +1,1 @@
+savedcmd_mt76x02-lib.ko := ld -r -m elf_x86_64 -z noexecstack --no-warn-rwx-segments --build-id=sha1  -T /usr/src/linux-headers-6.14.0-29-generic/scripts/module.lds -o mt76x02-lib.ko mt76x02-lib.o mt76x02-lib.mod.o .module-common.o

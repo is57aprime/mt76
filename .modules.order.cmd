@@ -1,0 +1,1 @@
+savedcmd_modules.order := {   echo mt76.o;   echo mt76-usb.o;   echo mt76-sdio.o;   echo mt76x02-lib.o;   echo mt76x02-usb.o;   echo mt76-connac-lib.o;   cat mt76x0/modules.order;   cat mt76x2/modules.order;   cat mt7603/modules.order;   cat besra/modules.order; :; } > modules.order
