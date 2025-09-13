@@ -1400,7 +1400,7 @@ void mt76_sta_pre_rcu_remove(struct ieee80211_hw *hw, struct ieee80211_vif *vif,
 }
 EXPORT_SYMBOL_GPL(mt76_sta_pre_rcu_remove);
 
-int mt76_get_txpower(struct ieee80211_hw *hw, struct ieee80211_vif *vif,
+int mt76_get_txpower(struct ieee80211_hw *hw, struct ieee80211_vif *vif, unsigned int temp,
 		     int *dbm)
 {
 	struct mt76_phy *phy = hw->priv;
