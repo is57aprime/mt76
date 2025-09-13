@@ -1,0 +1,11 @@
+./mmio.o
+./util.o
+./trace.o
+./dma.o
+./mac80211.o
+./debugfs.o
+./eeprom.o
+./tx.o
+./agg-rx.o
+./mcu.o
+./pci.o
