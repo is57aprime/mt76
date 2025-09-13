@@ -1,17 +1,13 @@
-pci.o: mt76x0/pci.c \
+pci_main.o: mt76x2/pci_main.c \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/compiler-version.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/kconfig.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/generated/autoconf.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/compiler_types.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/compiler_attributes.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/compiler-gcc.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/kernel.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/stdarg.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/align.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/const.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/vdso/const.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/const.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/array_size.h \
+ mt76x2/mt76x2.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/device.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/dev_printk.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/compiler.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/compiler_types.h \
  /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/generated/asm/rwonce.h \
@@ -33,39 +29,15 @@ pci.o: mt76x0/pci.c \
  /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/uapi/asm/posix_types_64.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/uapi/asm-generic/posix_types.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/kcsan-checks.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/limits.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/limits.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/vdso/limits.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/linkage.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/stringify.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/export.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/linkage.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/ibt.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/container_of.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/build_bug.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/bitops.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/ratelimit.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/ratelimit_types.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/bits.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/const.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/vdso/const.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/const.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/vdso/bits.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/bits.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/typecheck.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/kernel.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/sysinfo.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/asm-generic/bitops/generic-non-atomic.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/barrier.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/alternative.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/objtool.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/objtool_types.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/asm.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/extable_fixup_types.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/bug.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/instrumentation.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/asm-generic/bug.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/once_lite.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/panic.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/printk.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/init.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/kern_levels.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/ratelimit_types.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/build_bug.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/param.h \
  /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/generated/uapi/asm/param.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/asm-generic/param.h \
@@ -82,20 +54,98 @@ pci.o: mt76x0/pci.c \
  /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/uapi/asm/swab.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/byteorder/generic.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/lockdep_types.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/sched.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/sched.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/current.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/cache.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/kernel.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/sysinfo.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/cache.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/linkage.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/stringify.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/export.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/linkage.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/ibt.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/percpu.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/asm.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/extable_fixup_types.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/asm-generic/percpu.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/threads.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/percpu-defs.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/processor.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/processor-flags.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/uapi/asm/processor-flags.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/mem_encrypt.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/mem_encrypt.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/init.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/cc_platform.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/math_emu.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/ptrace.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/segment.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/alternative.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/objtool.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/objtool_types.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/bug.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/instrumentation.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/asm-generic/bug.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/once_lite.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/panic.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/printk.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/stdarg.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/kern_levels.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/dynamic_debug.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/jump_label.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/cleanup.h \
  /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/jump_label.h \
  /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/nops.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/page_types.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/vdso/page.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/page_64_types.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/kaslr.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/uapi/asm/ptrace.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/uapi/asm/ptrace-abi.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/paravirt_types.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/desc_defs.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/pgtable_types.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/pgtable_64_types.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/sparsemem.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/nospec-branch.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/static_key.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/cpufeatures.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/required-features.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/disabled-features.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/msr-index.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/unwind_hints.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/orc_types.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/asm-offsets.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/generated/asm-offsets.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/GEN-for-each-reg.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/proto.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/uapi/asm/ldt.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/uapi/asm/sigcontext.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/cpuid.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/string.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/string_64.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/paravirt.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/bug.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/cpumask.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/kernel.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/align.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/array_size.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/limits.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/limits.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/vdso/limits.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/container_of.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/bitops.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/typecheck.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/asm-generic/bitops/generic-non-atomic.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/barrier.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/asm-generic/barrier.h \
  /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/bitops.h \
  /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/rmwcc.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/args.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/asm-generic/bitops/sched.h \
  /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/arch_hweight.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/cpufeatures.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/required-features.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/disabled-features.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/asm-generic/bitops/const_hweight.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/asm-generic/bitops/instrumented-atomic.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/instrumented.h \
@@ -115,67 +165,6 @@ pci.o: mt76x0/pci.c \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/static_call_types.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/instruction_pointer.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/wordpart.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/module.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/list.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/poison.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/stat.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/uapi/asm/stat.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/stat.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/time.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/cache.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/cache.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/math64.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/vdso/math64.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/time64.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/vdso/time64.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/time.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/time_types.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/time32.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/timex.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/timex.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/timex.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/processor.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/processor-flags.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/uapi/asm/processor-flags.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/mem_encrypt.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/mem_encrypt.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/cc_platform.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/math_emu.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/ptrace.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/segment.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/page_types.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/vdso/page.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/page_64_types.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/kaslr.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/uapi/asm/ptrace.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/uapi/asm/ptrace-abi.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/paravirt_types.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/desc_defs.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/pgtable_types.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/pgtable_64_types.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/sparsemem.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/nospec-branch.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/static_key.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/msr-index.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/unwind_hints.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/orc_types.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/percpu.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/asm-generic/percpu.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/threads.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/percpu-defs.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/current.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/asm-offsets.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/generated/asm-offsets.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/GEN-for-each-reg.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/proto.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/uapi/asm/ldt.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/uapi/asm/sigcontext.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/cpuid.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/string.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/string_64.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/paravirt.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/bug.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/cpumask.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/bitmap.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/errno.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/errno.h \
@@ -218,32 +207,16 @@ pci.o: mt76x0/pci.c \
  /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/shstk.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/personality.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/personality.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/tsc.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/cpufeature.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/msr.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/msr-index.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/cpumask.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/uapi/asm/msr.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/ioctl.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/generated/uapi/asm/ioctl.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/asm-generic/ioctl.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/uapi/asm-generic/ioctl.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/shared/msr.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/percpu.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/alloc_tag.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/codetag.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/preempt.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/preempt.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/smp.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/smp_types.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/llist.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/math64.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/vdso/math64.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/thread_info.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/restart_block.h \
  /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/thread_info.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/smp.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/mmdebug.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/sched.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/sched.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/cpufeature.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/preempt.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/preempt.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/smp_types.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/llist.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/pid_types.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/sem_types.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/shm.h \
@@ -263,6 +236,7 @@ pci.o: mt76x0/pci.c \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/refcount_types.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/resource.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/resource.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/time_types.h \
  /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/generated/uapi/asm/resource.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/asm-generic/resource.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/uapi/asm-generic/resource.h \
@@ -292,6 +266,13 @@ pci.o: mt76x0/pci.c \
  /usr/src/linux-headers-6.14.0-29-generic/include/asm-generic/kmap_size.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/sched/ext.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/rhashtable-types.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/alloc_tag.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/codetag.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/smp.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/list.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/poison.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/smp.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/cpumask.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/mutex.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/lockdep.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/debug_locks.h \
@@ -308,14 +289,18 @@ pci.o: mt76x0/pci.c \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/rwlock.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/spinlock_api_smp.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/rwlock_api_smp.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/tracepoint-defs.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/vdso/time32.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/vdso/time.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/uidgid.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/highuid.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/buildid.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/kmod.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/umh.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/energy_model.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/kobject.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/sysfs.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/kernfs.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/idr.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/radix-tree.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/percpu.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/mmdebug.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/rcupdate.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/context_tracking_irq.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/rcutree.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/xarray.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/gfp.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/mmzone.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/list_nulls.h \
@@ -324,6 +309,10 @@ pci.o: mt76x0/pci.c \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/nodemask.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/random.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/random.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/ioctl.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/generated/uapi/asm/ioctl.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/asm-generic/ioctl.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/uapi/asm-generic/ioctl.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/irqnr.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/irqnr.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/pageblock-flags.h \
@@ -336,9 +325,6 @@ pci.o: mt76x0/pci.c \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/kref.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/refcount.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/rbtree.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/rcupdate.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/context_tracking_irq.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/rcutree.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/maple_tree.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/rwsem.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/completion.h \
@@ -347,6 +333,22 @@ pci.o: mt76x0/pci.c \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/timer.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/ktime.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/jiffies.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/time.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/time64.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/vdso/time64.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/time.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/time32.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/timex.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/timex.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/timex.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/tsc.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/msr.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/msr-index.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/uapi/asm/msr.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/shared/msr.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/tracepoint-defs.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/vdso/time32.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/vdso/time.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/vdso/jiffies.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/generated/timeconst.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/vdso/ktime.h \
@@ -378,6 +380,34 @@ pci.o: mt76x0/pci.c \
  /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/apicdef.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/asm-generic/topology.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/cpu_smt.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/kconfig.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/sched/mm.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/sync_core.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/sync_core.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/sched/coredump.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/uidgid.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/highuid.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/kobject_ns.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/stat.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/uapi/asm/stat.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/stat.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/sched/cpufreq.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/sched/topology.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/sched/idle.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/sched/sd_flags.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/ioport.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/klist.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/pm.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/hrtimer.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/hrtimer_defs.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/timerqueue.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/device/bus.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/device/class.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/device/driver.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/module.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/buildid.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/kmod.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/umh.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/sysctl.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/sysctl.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/elf.h \
@@ -418,13 +448,6 @@ pci.o: mt76x0/pci.c \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/path.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/list_lru.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/shrinker.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/xarray.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/kconfig.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/sched/mm.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/sync_core.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/sync_core.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/sched/coredump.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/radix-tree.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/pid.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/capability.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/capability.h \
@@ -471,12 +494,8 @@ pci.o: mt76x0/pci.c \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/key.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/assoc_array.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/sched/user.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/ratelimit.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/posix-timers.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/alarmtimer.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/hrtimer.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/hrtimer_defs.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/timerqueue.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/rcuref.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/rcu_sync.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/delayed_call.h \
@@ -524,11 +543,6 @@ pci.o: mt76x0/pci.c \
  /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/vdso.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/elf.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/elf-em.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/kobject.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/sysfs.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/kernfs.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/idr.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/kobject_ns.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/moduleparam.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/rbtree_latch.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/error-injection.h \
@@ -536,38 +550,24 @@ pci.o: mt76x0/pci.c \
  /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/module.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/asm-generic/module.h \
  /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/orc_types.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/pci.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/mod_devicetable.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/mei.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/mei_uuid.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/ioport.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/device.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/dev_printk.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/energy_model.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/sched/cpufreq.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/sched/topology.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/sched/idle.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/sched/sd_flags.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/klist.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/pm.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/device/bus.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/device/class.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/device/driver.h \
  /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/device.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/pm_wakeup.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/interrupt.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/irqreturn.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/hardirq.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/context_tracking_state.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/ftrace_irq.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/vtime.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/hardirq.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/irq.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/irq_vectors.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/sections.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/asm-generic/sections.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/io.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/dma-mapping.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/dma-direction.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/scatterlist.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/mm.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/pgalloc_tag.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/page_ext.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/stacktrace.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/page_ref.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/sizes.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/pgtable.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/memremap.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/cacheinfo.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/cpuhplock.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/huge_mm.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/vmstat.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/vm_event_item.h \
  /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/io.h \
  /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/generated/asm/early_ioremap.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/asm-generic/early_ioremap.h \
@@ -577,39 +577,6 @@ pci.o: mt76x0/pci.c \
  /usr/src/linux-headers-6.14.0-29-generic/include/asm-generic/pci_iomap.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/logic_pio.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/fwnode.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/resource_ext.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/msi_api.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/pci.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/pci_regs.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/pci_ids.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/dmapool.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/scatterlist.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/mm.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/pgalloc_tag.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/page_ext.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/stacktrace.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/page_ref.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/pgtable.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/memremap.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/cacheinfo.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/cpuhplock.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/huge_mm.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/vmstat.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/vm_event_item.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/pci.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/memtype.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/dma-mapping.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/dma-direction.h \
- mt76x0/mt76x0.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/usb.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/usb/ch9.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/usb/ch9.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/delay.h \
- /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/delay.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/asm-generic/delay.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/pm_runtime.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/net/mac80211.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/if_ether.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/skbuff.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/bvec.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/highmem.h \
@@ -617,6 +584,11 @@ pci.o: mt76x0/pci.c \
  /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/cacheflush.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/asm-generic/cacheflush.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/kmsan.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/hardirq.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/context_tracking_state.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/ftrace_irq.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/vtime.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/hardirq.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/highmem-internal.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/net/checksum.h \
  /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/checksum.h \
@@ -637,9 +609,10 @@ pci.o: mt76x0/pci.c \
  /usr/src/linux-headers-6.14.0-29-generic/include/net/net_debug.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/net/dropreason-core.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/net/netmem.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/ieee80211.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/etherdevice.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/netdevice.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/delay.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/delay.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/asm-generic/delay.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/prefetch.h \
  /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/local.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/dynamic_queue_limits.h \
@@ -701,6 +674,12 @@ pci.o: mt76x0/pci.c \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/nsproxy.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/user_namespace.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/kernel_stat.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/interrupt.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/irqreturn.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/irq.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/irq_vectors.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/sections.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/asm-generic/sections.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/cgroup-defs.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/bpf-cgroup-defs.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/psi_types.h \
@@ -757,12 +736,50 @@ pci.o: mt76x0/pci.c \
  /usr/src/linux-headers-6.14.0-29-generic/include/net/compat.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/netlink.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/netdevice.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/if_ether.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/if_link.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/if_link.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/if_bonding.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/netdev.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/hashtable.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/net/neighbour_tables.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/irq.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/irqhandler.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/io.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/generated/asm/irq_regs.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/asm-generic/irq_regs.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/irqdesc.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/hw_irq.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/profile.h \
+ mt76x2/../mt76x02.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/kfifo.h \
+ mt76x2/../mt76.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/generated/uapi/linux/version.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/leds.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/dt-bindings/leds/common.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/usb.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/mod_devicetable.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/mei.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/mei_uuid.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/usb/ch9.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/usb/ch9.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/pm_runtime.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/average.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/soc/mediatek/mtk_wed.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/regmap.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/iopoll.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/pci.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/resource_ext.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/msi_api.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/pci.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/pci_regs.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/pci_ids.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/dmapool.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/pci.h \
+ /usr/src/linux-headers-6.14.0-29-generic/arch/x86/include/asm/memtype.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/net/mac80211.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/ieee80211.h \
+ /usr/src/linux-headers-6.14.0-29-generic/include/linux/etherdevice.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/crc32.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/bitrev.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/unaligned.h \
@@ -776,21 +793,10 @@ pci.o: mt76x0/pci.c \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/debugfs.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/uapi/linux/nl80211.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/linux/rfkill.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/leds.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/dt-bindings/leds/common.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/net/regulatory.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/net/codel.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/net/ieee80211_radiotap.h \
- mt76x0/../mt76x02.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/kfifo.h \
- mt76x0/../mt76.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/generated/uapi/linux/version.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/average.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/soc/mediatek/mtk_wed.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/regmap.h \
- /usr/src/linux-headers-6.14.0-29-generic/include/linux/iopoll.h \
  /usr/src/linux-headers-6.14.0-29-generic/include/net/netlink.h \
- mt76x0/../util.h mt76x0/../testmode.h mt76x0/../mt76x02_regs.h \
- mt76x0/../mt76x02_mac.h mt76x0/../mt76x02_dfs.h mt76x0/../mt76x02_dma.h \
- mt76x0/../mt76x02.h mt76x0/../dma.h mt76x0/eeprom.h \
- mt76x0/../mt76x02_eeprom.h mt76x0/mcu.h mt76x0/../mt76x02_mcu.h
+ mt76x2/../util.h mt76x2/../testmode.h mt76x2/../mt76x02_regs.h \
+ mt76x2/../mt76x02_mac.h mt76x2/../mt76x02_dfs.h mt76x2/../mt76x02_dma.h \
+ mt76x2/../mt76x02.h mt76x2/../dma.h mt76x2/mac.h mt76x2/../mt76x02_mac.h
